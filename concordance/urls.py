@@ -3,9 +3,9 @@
 from django.conf.urls import url
 from . import views
 
-app_name = 'music'
+app_name = 'corpusapp'
 
 urlpatterns = [
-    #/music/
+    #/corpusapp/
     url(r'^$', views.IndexView.as_view(), name="index"),
 ]

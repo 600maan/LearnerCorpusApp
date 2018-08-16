@@ -13,7 +13,7 @@ from django.http import JsonResponse
 
 
 class IndexView(generic.ListView):
-    template_name = 'music/index.html'
+    template_name = 'corpusapp/index.html'
     context_object_name = 'all_albums'
 
     def get_queryset(self):
