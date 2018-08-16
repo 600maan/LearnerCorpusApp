@@ -12,6 +12,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="{% static 'music/Scripts/Utils.js' %}"></script>
 
 </head>
 <body>
@@ -30,13 +31,12 @@
 
         <!-- Items -->
         <div class="collapse navbar-collapse" id="topNavBar">
-
-            <form class="navbar-form navbar-left" role="search" method="get" action="#">
+            <div class="navbar-form navbar-left" role="search">
                 <div class="form-group">
                     <input type="text" class="form-control" name="q" value="">
                 </div>
-                <button type="submit" class="btn btn-default">Search</button>
-            </form>
+                <button type="button" class="btn btn-default" onclick="corpus.getConcordance()">Search</button>
+            </div>
         </div>
     </div>
 </nav>
