@@ -9,6 +9,7 @@ from .serializers import ConcordanceSerializer
 # from nltk.corpus import *
 from nltk.text import Text
 from django.views import generic
+from django.http import JsonResponse
 
 
 class IndexView(generic.ListView):
@@ -24,14 +25,9 @@ class ConcordanceList(APIView):
     # Return all Concordances
     def get(self, request):
         # Read the .docx files and convert it into nltk.Text type for using concordance function
-        #emma = Text(gutenberg.words('C:\\Users\\srai\\AppData\\Roaming\\nltk_data\\corpora\\gutenberg\\austen-emma.txt'))
-        # tt = emma.concordance("surprize")
-        result = (text1.concordance("monstrous"))
-        #corpus = Corpus.objects.all()
-        # Find the Concordances
-        # Serialize data
-        #serializer = ConcordanceSerializer(corpus, many=True)
-        # return Response('{name: '+ str(ll) +', age: 31, city: "dd"}')
+        # emma = Text(gutenberg.words('C:\\Users\\srai\\AppData\\Roaming\\nltk_data\\corpora\\gutenberg\\austen-emma.txt'))
+
+        result = (text1.concordance(str(request.GET.get('param'))))
 
         return Response(result)
 
