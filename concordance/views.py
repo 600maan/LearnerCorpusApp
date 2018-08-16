@@ -8,14 +8,22 @@ from .models import Corpus
 from .serializers import ConcordanceSerializer
 # from nltk.corpus import *
 from nltk.text import Text
+from django.views import generic
 
+
+class IndexView(generic.ListView):
+    template_name = 'music/index.html'
+    context_object_name = 'all_albums'
+
+    def get_queryset(self):
+        return ""
 
 # List all Concordances for the given word
 class ConcordanceList(APIView):
 
     # Return all Concordances
     def get(self, request):
-        # Read the Corpus
+        # Read the .docx files and convert it into nltk.Text type for using concordance function
         #emma = Text(gutenberg.words('C:\\Users\\srai\\AppData\\Roaming\\nltk_data\\corpora\\gutenberg\\austen-emma.txt'))
         # tt = emma.concordance("surprize")
         result = (text1.concordance("monstrous"))

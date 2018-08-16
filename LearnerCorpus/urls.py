@@ -14,7 +14,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 from django.conf.urls import url
 from django.conf.urls.static import static
 from django.conf import settings
@@ -25,7 +25,8 @@ from concordance import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^concordance/',views.ConcordanceList.as_view()),
+    url(r'^corpus/index', include('concordance.urls')),
+    url(r'^concordance/', views.ConcordanceList.as_view()),
 ]
 
 urlpatterns = format_suffix_patterns(urlpatterns)
