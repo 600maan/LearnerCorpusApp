@@ -10,7 +10,7 @@ django = "*"
 gunicorn = "*"
 django-heroku = "*"
 nltk = "*"
-rest_framework = "*"
+djangorestframework = "*"
 
 [requires]
 python_version = "3.6"
