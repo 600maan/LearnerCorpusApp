@@ -1,5 +1,4 @@
 
-
 var corpus = {
     getConcordance : function() {
                             // retrieve the search query
@@ -8,10 +7,18 @@ var corpus = {
                                 method  : "GET",
                                 url     :"http://localhost:8000/concordance/",
                                 data    : { param : search_word },
-                                success : function(data) {
-                                            $("#concordance_display").text(data);
-                                        }
+                                success :  corpus.displayConcordanceData
                             });
+    },
+    displayConcordanceData : function(data) {
+            // Clean Table before appending new rows
+            $("#tbody").empty();
+            var tbody = document.getElementById('tbody');
+            for (var i = 0; i < data.length; i++) {
+                var tr = "<tr>";
+                tr += "<td>" + data[i][6] + "</td></tr>";
+                tbody.innerHTML += tr;
+            }
     }
 }
 
