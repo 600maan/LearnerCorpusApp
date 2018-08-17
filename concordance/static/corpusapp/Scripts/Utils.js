@@ -16,7 +16,7 @@ var corpus = {
             var tbody = document.getElementById('tbody');
             for (var i = 0; i < data.length; i++) {
                 var tr = "<tr>";
-                tr += "<td>" + data[i][6] + "</td></tr>";
+                tr += "<td>" + data[i][4] + " <strong>" + data[i][1] + "</strong> " + data[i][5] + "</td></tr>";
                 tbody.innerHTML += tr;
             }
     }
