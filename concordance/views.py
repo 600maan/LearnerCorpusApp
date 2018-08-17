@@ -14,8 +14,6 @@ from django.views import generic
 
 class IndexView(generic.ListView):
     template_name = 'corpusapp/index.html'
-    context_object_name = 'all_albums'
-
     def get_queryset(self):
         return ""
 
