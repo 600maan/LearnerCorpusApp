@@ -25,6 +25,7 @@ from concordance import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^$', include('concordance.urls')),
     url(r'^corpus/index', include('concordance.urls')),
     url(r'^concordance/', views.ConcordanceList.as_view()),
 ]
