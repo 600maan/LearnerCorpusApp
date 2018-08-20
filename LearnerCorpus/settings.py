@@ -127,6 +127,7 @@ STATIC_URL = '/static/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'corpus_files')
 MEDIA_URL = '/corpus_files/'
 
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'ouapp1.herokuapp.com']
 CORS_ORIGIN_ALLOW_ALL = True
 CORS_ALLOW_METHODS = (
     'GET',
