@@ -1,6 +1,6 @@
 # from django.shortcuts import render
 # from django.shortcuts import get_object_or_404
-from nltk.book import text1
+#from nltk.book import text1
 from rest_framework.views import APIView
 from rest_framework.response import Response
 # from rest_framework import status
@@ -25,7 +25,8 @@ class ConcordanceList(APIView):
         # Read the .docx files and convert it into nltk.Text type for using concordance function
         # emma = Text(gutenberg.words('C:\\Users\\srai\\AppData\\Roaming\\nltk_data\\corpora\\gutenberg\\austen-emma.txt'))
 
-        result = (text1.concordance(str(request.GET.get('param'))))
+        #result = (text1.concordance(str(request.GET.get('param'))))
+        result = ("output")
 
         return Response(result)
 
