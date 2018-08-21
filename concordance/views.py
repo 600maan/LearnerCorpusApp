@@ -20,10 +20,10 @@ class IndexView(generic.ListView):
 # List all Concordances for the given word
 class ConcordanceList(APIView):
 
-    # Return all Concordances
     def get(self, request):
-        # Open and Read the txt files
+        # Open and Read the txt files from local directory
         corpusFile = open('D:\\data\Downloads\\ENGLE200F-Assignments-Sample\\test.txt', 'rU')
+        # corpusFile = open('corpusFiles/test.txt', 'rU')
         corpusFileRead = corpusFile.read()
         # ftext1 = corpusFileRead.split()
         abst = Text(corpusFileRead.split())
