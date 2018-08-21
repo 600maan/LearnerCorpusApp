@@ -24,7 +24,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'j#0&osb(f!+qk#nv@j%59#07k=g+5yw8e2kbb+ces*+10l8lxy'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = []
 
@@ -123,17 +123,12 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
-STATIC_URL = 'concordance/static/'
-
-SITE_ROOT = os.path.dirname(os.path.realpath(__file__))
-STATICFILES_DIRS = (
-    os.path.join(SITE_ROOT, 'concordance/static/'),
-)
+STATIC_URL = '/static/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'corpus_files')
 MEDIA_URL = '/corpus_files/'
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'ouapp1.herokuapp.com']
+#ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'ouapp1.herokuapp.com']
 CORS_ORIGIN_ALLOW_ALL = True
 CORS_ALLOW_METHODS = (
     'GET',
