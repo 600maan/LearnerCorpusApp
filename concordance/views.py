@@ -24,7 +24,7 @@ class ConcordanceList(APIView):
     # Return all Concordances
     def get(self, request):
         # Open and Read the txt files
-        corpusFile = open(CORPUS_ROOT + "a1.txt", 'rU')
+        corpusFile = open(CORPUS_ROOT + "a1.txt", 'rU', encoding="utf8")
         corpusFileRead = corpusFile.read()
         # ftext1 = corpusFileRead.split()
         abst = Text(corpusFileRead.split())
