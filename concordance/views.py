@@ -9,6 +9,7 @@ from rest_framework.response import Response
 # from nltk.corpus import *
 from nltk.text import Text
 from django.views import generic
+from LearnerCorpus.settings import CORPUS_ROOT
 # from django.http import JsonResponse
 
 
@@ -20,10 +21,10 @@ class IndexView(generic.ListView):
 # List all Concordances for the given word
 class ConcordanceList(APIView):
 
+    # Return all Concordances
     def get(self, request):
-        # Open and Read the txt files from local directory
-        corpusFile = open('D:\\data\Downloads\\ENGLE200F-Assignments-Sample\\test.txt', 'rU')
-        # corpusFile = open('corpusFiles/test.txt', 'rU')
+        # Open and Read the txt files
+        corpusFile = open(CORPUS_ROOT + "a1.txt", 'rU')
         corpusFileRead = corpusFile.read()
         # ftext1 = corpusFileRead.split()
         abst = Text(corpusFileRead.split())
