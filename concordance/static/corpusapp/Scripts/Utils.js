@@ -18,6 +18,18 @@ var corpus = {
                 tr += "<td>" + data[i][4] + " <strong>" + data[i][1] + "</strong> " + data[i][5] + "</td></tr>";
                 tbody.innerHTML += tr;
             }
+    },
+    getFrequency : function() {
+            $.ajax({
+                method  : "GET",
+                url     :"http://localhost:8000/viewFrequency/",
+                success :  corpus.displayFrequencyData
+            });
+    },
+    displayFrequencyData : function(data) {
+            $("#tbody").empty();
+            var tbody = document.getElementById('tbody');
+            tbody.innerHTML += data
     }
 }
 

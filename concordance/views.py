@@ -10,6 +10,7 @@ from rest_framework.response import Response
 from nltk.text import Text
 from django.views import generic
 from LearnerCorpus.settings import CORPUS_ROOT
+from nltk import FreqDist
 # from django.http import JsonResponse
 
 
@@ -35,3 +36,19 @@ class ConcordanceList(APIView):
         pass
 
 
+# List the frequencis of most common word
+class FrequencyList(APIView):
+
+    # Return all Concordances
+    def get(self, request):
+        # Open and Read the txt files
+        corpusFile = open(CORPUS_ROOT + "a1.txt", 'rU', encoding="utf8")
+        corpusFileRead = corpusFile.read()
+        abst = Text(corpusFileRead.split())
+
+        fdist1 = FreqDist(abst)
+        result = fdist1.most_common(50)
+        return Response(result)
+
+    def post(self):
+        pass
