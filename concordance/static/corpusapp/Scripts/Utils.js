@@ -29,7 +29,12 @@ var corpus = {
     displayFrequencyData : function(data) {
             $("#tbody").empty();
             var tbody = document.getElementById('tbody');
-            tbody.innerHTML += data
+            var tt = "<thead> <tr> <th>Word</th> <th>Frequency</th> </tr> </thead>"
+            for (var i = 0; i < data.length; i++) {
+                var tr = "<tr>";
+                tr += "<td>" + data[i][0] + "</td> <td><strong>" + data[i][1] + "</strong></td></tr>";
+                tbody.innerHTML += tr;
+            }
     }
 }
 
