@@ -1,11 +1,16 @@
 
+// Local machine
+//var baseURL = "http://localhost:8000/";
+// Production machine
+var baseURL = "http://142.93.188.20:8000/";
+
 var corpus = {
     getConcordance : function() {
             // retrieve the search query
             var search_word = document.getElementById('search_word').value
             $.ajax({
                 method  : "GET",
-                url     :"http://localhost:8000/viewConcordance/",
+                url     : baseURL + "viewConcordance/",
                 data    : { param : search_word },
                 success :  corpus.displayConcordanceData
             });
@@ -22,7 +27,7 @@ var corpus = {
     getFrequency : function() {
             $.ajax({
                 method  : "GET",
-                url     :"http://localhost:8000/viewFrequency/",
+                url     :baseURL + "viewFrequency/",
                 success :  corpus.displayFrequencyData
             });
     },
