@@ -1,13 +1,13 @@
 
 // Local machine
-//var baseURL = "http://localhost:8000/";
+var baseURL = "http://localhost:8000/";
 // Production machine
-var baseURL = "http://142.93.188.20:8000/";
+//var baseURL = "http://142.93.188.20:8000/";
 
 var corpus = {
     getConcordance : function() {
             // retrieve the search query
-            var search_word = document.getElementById('search_word').value
+            var search_word = document.getElementById('search_word').value;
             $.ajax({
                 method  : "GET",
                 url     : baseURL + "viewConcordance/",
