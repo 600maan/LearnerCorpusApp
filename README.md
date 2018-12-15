@@ -17,3 +17,7 @@ Dependencies
 
 Notes
 1) Add return concordance_list to the print_concordance function in nltk.text.py
+
+
+Start Server
+python manage.py runserver 127.0.0.1:8000
