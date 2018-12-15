@@ -9,6 +9,10 @@ https://www.digitalocean.com/community/tutorials/how-to-install-python-3-and-set
 Install Django in Ubuntu
 https://www.digitalocean.com/community/tutorials/how-to-install-the-django-web-framework-on-ubuntu-18-04
 
+Install latest Django to use path library
+
+pip3 install --upgrade django
+
 Dependencies
 1) python 3.7.0
 2) pip install nltk
