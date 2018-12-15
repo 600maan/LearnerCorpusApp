@@ -1,8 +1,9 @@
 # LearnerCorpusApp
 A Django web application for language learner Corpus
 
-Install dependencies at once
-pip install -r requirements.txt
+cd LearnerCorpusApp and execute below command to install all required dependencies at once
+
+pip install -r requirements.txt --user
 
 
 Install python and pip in Ubuntu
