@@ -26,3 +26,8 @@ Notes
 Start Server
 
 python manage.py runserver 127.0.0.1:8000
+
+
+Kill Process on ubuntu
+
+https://stackoverflow.com/questions/9346211/how-to-kill-a-process-on-a-port-on-ubuntu
