@@ -24,8 +24,8 @@ Notes
 
 
 Start Server
-
-python manage.py runserver 127.0.0.1:8000
+80 : default HTTP port
+python manage.py runserver 0.0.0.0:80
 
 
 Kill Process on ubuntu
