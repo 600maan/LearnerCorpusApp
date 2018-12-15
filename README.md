@@ -34,3 +34,9 @@ python manage.py runserver 0.0.0.0:80
 Kill Process on ubuntu
 
 https://stackoverflow.com/questions/9346211/how-to-kill-a-process-on-a-port-on-ubuntu
+
+
+Use Screen in Ubuntu
+
+https://www.digitalocean.com/community/tutorials/how-to-install-and-use-screen-on-an-ubuntu-cloud-server
+
