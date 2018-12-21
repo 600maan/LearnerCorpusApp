@@ -1,6 +1,9 @@
 # LearnerCorpusApp
 A Django web application for language learner Corpus
 
+Follow Steps in Maakefile
+
+
 cd LearnerCorpusApp and execute below command to install all required dependencies at once
 
 pip install -r requirements.txt --user
