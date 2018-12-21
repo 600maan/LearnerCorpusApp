@@ -7,7 +7,7 @@ install_python:
   sudo apt-get install -y python3.7
   sudo apt install -y python3-pip
   sudo apt-get install -y git
-  pip install -r requirements.txt --user 
+  pip3 install -r requirements.txt --user 
   
 run:
   python manage.py runserver $(HOST):$(PORT)
