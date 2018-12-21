@@ -6,6 +6,7 @@ install_python:
   sudo apt-get -y upgrade
   sudo apt-get install -y python3.7
   sudo apt install -y python3-pip
+  sudo apt-get install git
   pip install -r requirements.txt --user 
   
 run:
