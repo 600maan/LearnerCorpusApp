@@ -10,5 +10,5 @@ install_python:
   pip3 install -r requirements.txt --user 
   
 run:
-  python manage.py runserver $(HOST):$(PORT)
+  python3 manage.py runserver $(HOST):$(PORT)
 
