@@ -1,7 +1,7 @@
 # LearnerCorpusApp
 A Django web application for language learner Corpus
 
-Follow Steps in Maakefile
+Follow Steps in Makefile
 
 
 cd LearnerCorpusApp and execute below command to install all required dependencies at once
