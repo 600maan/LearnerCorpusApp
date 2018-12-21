@@ -1,7 +1,7 @@
 HOST=0.0.0.0
 PORT=80
 
-install_python:
+install_requirements:
   sudo apt-get update
   sudo apt-get -y upgrade
   sudo apt-get install -y python3.7
