@@ -5,8 +5,6 @@
  apt-get -y upgrade
  apt-get install -y python3.7
  apt install -y python3-pip
- apt-get install -y git
- apt-get install -y curl  
  pip3 install -r requirements.txt --user 
  
  echo "Start Server"
