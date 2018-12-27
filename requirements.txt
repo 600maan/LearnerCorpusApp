@@ -1,4 +1,4 @@
-pymongo>=3.5.1
+pymongo>=3.7.2
 certifi>=2018.8.13
 chardet>=3.0.4
 Django>=2.1.2
