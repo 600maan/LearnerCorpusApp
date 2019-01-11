@@ -14,6 +14,11 @@ from nltk import FreqDist
 # from django.http import JsonResponse
 
 
+class HomeView(generic.ListView):
+    template_name = 'corpusapp/home.html'
+    def get_queryset(self):
+        return ""
+
 class IndexView(generic.ListView):
     template_name = 'corpusapp/index.html'
     def get_queryset(self):

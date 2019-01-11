@@ -23,6 +23,7 @@ from concordance import views
 from sentimentanalysis import SAviews
 
 urlpatterns = [
+    url(r'^$', views.HomeView.as_view()),
     url(r'^admin/', admin.site.urls),
     url(r'^corpus/index', include('concordance.urls')),
     url(r'^sentimentanalysis/index', include('sentimentanalysis.urls')),
