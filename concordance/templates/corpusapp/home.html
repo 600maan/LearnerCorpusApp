@@ -10,7 +10,7 @@
     <!-- Loads the path to your static files -->
     {% load staticfiles %}
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
+  <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"> -->
   <!-- Bootstrap core CSS -->
   <link rel="stylesheet" type="text/css" href="{% static 'corpusapp/CSS/bootstrap.min.css' %}"/>
   <!-- Material Design Bootstrap -->
@@ -173,11 +173,11 @@
 
   <!-- SCRIPTS -->
   <!-- JQuery -->
-  <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+  <script type="text/javascript" src= " {% static 'corpusapp/Scripts/jquery-3.3.1.min.js' %} "></script>
   <!-- Bootstrap tooltips -->
-  <script type="text/javascript" src="js/popper.min.js"></script>
+  <script type="text/javascript" src= "{% static 'corpusapp/Scripts/popper.min.js' %} "></script>
   <!-- Bootstrap core JavaScript -->
-  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="{% static 'corpusapp/Scripts/bootstrap.min.js' %}"></script>
 </body>
 
 </html>
